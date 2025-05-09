@@ -1,0 +1,416 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fff8ed;
+    color: #444;
+}
+
+.hero {
+    background: #ffe0b2;
+    text-align: center;
+    padding: 48px 16px 32px 16px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #444;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    color: #444;
+}
+
+#buyNowBtn {
+    background: #ffa94d;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#buyNowBtn:hover {
+    background: #ff8800;
+}
+
+main {
+    background: #fff6e5;
+    padding: 32px 0 48px 0;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 32px;
+    color: #444;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 24px 18px 18px 18px;
+    width: 210px;
+    text-align: center;
+    transition: transform 0.15s;
+    margin-bottom: 24px;
+}
+
+.product-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+}
+
+.product-img {
+    width: 110px;
+    height: 130px;
+    margin: 0 auto 18px auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+}
+
+.dog-food {
+    background: #ffa94d;
+}
+.cat-food {
+    background: #63c7c7;
+}
+.dog-treats {
+    background: #ffb366;
+}
+.cat-treats {
+    background: #ffb84d;
+}
+
+.bird-food {
+    background: #ffd966;
+}
+.fish-food {
+    background: #6ec1e4;
+}
+.rabbit-treats {
+    background: #b6e388;
+}
+.hamster-treats {
+    background: #e4b6e3;
+}
+
+/* Icon and text for each product */
+.dog-food::before {
+    content: "🐶";
+    font-size: 2.2rem;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.dog-food::after {
+    content: "DOG FOOD";
+    white-space: pre-line;
+    font-size: 1.1rem;
+    color: #7a4a00;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.cat-food::before {
+    content: "🐱";
+    font-size: 2.2rem;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.cat-food::after {
+    content: "CAT FOOD";
+    white-space: pre-line;
+    font-size: 1.1rem;
+    color: #006d6d;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.dog-treats::before {
+    content: "🦴";
+    font-size: 2.2rem;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.dog-treats::after {
+    content: "DOG TREATS";
+    white-space: pre-line;
+    font-size: 1.1rem;
+    color: #7a4a00;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.cat-treats::before {
+    content: "🐟";
+    font-size: 2.2rem;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.cat-treats::after {
+    content: "CAT TREATS";
+    white-space: pre-line;
+    font-size: 1.1rem;
+    color: #7a4a00;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.bird-food::before {
+    content: "��";
+    font-size: 2.2rem;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.bird-food::after {
+    content: "BIRD FOOD";
+    white-space: pre-line;
+    font-size: 1.1rem;
+    color: #7a4a00;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.fish-food::before {
+    content: "🐠";
+    font-size: 2.2rem;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.fish-food::after {
+    content: "FISH FOOD";
+    white-space: pre-line;
+    font-size: 1.1rem;
+    color: #006d6d;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.rabbit-treats::before {
+    content: "🐰";
+    font-size: 2.2rem;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.rabbit-treats::after {
+    content: "RABBIT TREATS";
+    white-space: pre-line;
+    font-size: 1.1rem;
+    color: #7a4a00;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.hamster-treats::before {
+    content: "🐹";
+    font-size: 2.2rem;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.hamster-treats::after {
+    content: "HAMSTER TREATS";
+    white-space: pre-line;
+    font-size: 1.1rem;
+    color: #7a4a00;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.product-card h3 {
+    margin: 12px 0 6px 0;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 14px;
+}
+
+.add-cart {
+    background: #f5f5f5;
+    color: #444;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 0;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-cart:hover {
+    background: #ffe0b2;
+}
+
+.top-bar {
+    width: 100%;
+    max-width: 1500px;
+    margin: 18px auto 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 36px;
+    height: 64px;
+    position: relative;
+    border-radius: 16px;
+    z-index: 100;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffa94d;
+    letter-spacing: 1px;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 420px;
+    margin: 0 32px;
+}
+.search-form input[type="text"] {
+    padding: 8px 14px;
+    border: 1px solid #eee;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    background: #f9f9f9;
+}
+.search-form button {
+    background: #ffa94d;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    padding: 8px 14px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+.search-form button:hover {
+    background: #ff8800;
+}
+.topbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    color: #ffa94d;
+    cursor: pointer;
+    transition: color 0.2s;
+    user-select: none;
+}
+.material-icons:hover {
+    color: #ff8800;
+}
+
+.footer {
+    background: #ffe0b2;
+    padding: 32px 0 20px 0;
+    text-align: center;
+    color: #444;
+    margin-top: 40px;
+}
+.footer-content h3 {
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    color: #ffa94d;
+}
+.footer-content p {
+    margin: 4px 0;
+    font-size: 1.05rem;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #ff4d4f;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    z-index: 10;
+    display: none;
+}
