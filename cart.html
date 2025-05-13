@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Cat - Giỏ hàng</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="home.html">Fast Cat</a></div>
+        <div class="nav-links">
+            <a href="home.html">Trang chủ</a>
+            <a href="cart.html" class="active">Giỏ hàng</a>
+            <div class="user-menu">
+                <i class="fas fa-user user-icon"></i>
+                <div class="dropdown-menu" id="userDropdown">
+                    <!-- Content will be dynamically updated based on login status -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="cart-title">Giỏ hàng của bạn</h1>
+        <div class="cart-content">
+            <div class="cart-items">
+                <!-- Cart items will be loaded dynamically -->
+            </div>
+            <div class="cart-summary">
+                <!-- Cart summary will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

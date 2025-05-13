@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Cat - Thông tin cá nhân</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="home.html">Fast Cat</a></div>
+        <div class="nav-links">
+            <a href="home.html">Trang chủ</a>
+            <a href="cart.html">Giỏ hàng</a>
+            <div class="user-menu">
+                <i class="fas fa-user user-icon"></i>
+                <div class="dropdown-menu" id="userDropdown">
+                    <!-- Content will be dynamically updated based on login status -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="info-form-container">
+            <h1 class="page-title">Thông tin cá nhân</h1>
+            <form class="info-form">
+                <div class="avatar-upload">
+                    <img id="avatar-preview" src="default-avatar.png" alt="Avatar Preview">
+                    <label for="avatar-input" class="avatar-upload-btn">
+                        Chọn ảnh đại diện
+                    </label>
+                    <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Họ và tên:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Số điện thoại:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Địa chỉ:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="save-btn">Lưu thông tin</button>
+                    <a href="home.html" class="back-btn">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Kiểm tra đăng nhập khi trang được tải
+        window.onload = function() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (!currentUser) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // Lấy thông tin đã lưu của người dùng
+            const userInfo = JSON.parse(localStorage.getItem(`userInfo_${currentUser.email}`)) || {};
+            
+            // Điền thông tin đã lưu vào form
+            const nameInput = document.getElementById('name');
+            const phoneInput = document.getElementById('phone');
+            const addressInput = document.getElementById('address');
+            const avatarPreview = document.getElementById('avatar-preview');
+
+            if (nameInput) nameInput.value = userInfo.name || '';
+            if (phoneInput) phoneInput.value = userInfo.phone || '';
+            if (addressInput) addressInput.value = userInfo.address || '';
+            if (avatarPreview && userInfo.avatar) {
+                avatarPreview.src = userInfo.avatar;
+            } else {
+                avatarPreview.src = 'default-avatar.png';
+            }
+        }
+    </script>
+</body>
+</html> 
