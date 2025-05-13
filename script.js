@@ -437,4 +437,57 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.log('Register form not found');
     }
+
+    // Kiểm tra và thêm sản phẩm mặc định nếu chưa có
+    function initializeDefaultProducts() {
+        const existingProducts = JSON.parse(localStorage.getItem('products'));
+        if (!existingProducts || existingProducts.length === 0) {
+            const defaultProducts = [
+                {
+                    name: "Hạt cho chó",
+                    price: "150.000đ",
+                    img: "Image/dog-food.jpg"
+                },
+                {
+                    name: "Pate lon cho mèo",
+                    price: "130.000đ",
+                    img: "Image/cat-food.jpg"
+                },
+                {
+                    name: "Ăn vặt cho chó",
+                    price: "80.000đ",
+                    img: "Image/dog-treats.jpg"
+                },
+                {
+                    name: "Ăn vặt cho mèo",
+                    price: "75.000đ",
+                    img: "Image/cat-treats.jpg"
+                },
+                {
+                    name: "Đồ sấy khô",
+                    price: "135.000đ",
+                    img: "Image/Đồ sấy khô.jpg"
+                },
+                {
+                    name: "Xúc xích cho chó",
+                    price: "90.000đ",
+                    img: "Image/Xúc xích cho chó.jpg"
+                },
+                {
+                    name: "Cỏ mèo",
+                    price: "185.000đ",
+                    img: "Image/cỏ mèo.jpg"
+                },
+                {
+                    name: "Súp thưởng",
+                    price: "135.000đ",
+                    img: "Image/Súp thưởng.jpg"
+                }
+            ];
+            localStorage.setItem('products', JSON.stringify(defaultProducts));
+        }
+    }
+
+    // Gọi hàm khởi tạo sản phẩm mặc định khi trang được tải
+    initializeDefaultProducts();
 }); 
